@@ -965,19 +965,25 @@ main {
 
 .project-img {
   position: relative;
+  display: grid;
+  place-items: center;
   width: 100%;
   height: 200px;
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 15px;
+  background: var(--eerie-black-2);
 }
 
-.project-img--portrait { aspect-ratio: 1650 / 1972; }
+.project-img--portrait {
+  aspect-ratio: 1650 / 1972;
+  height: auto;
+}
 
-.project-img--landscape { aspect-ratio: 1906 / 1472; }
-
-.project-img--portrait,
-.project-img--landscape { height: auto; }
+.project-img--landscape {
+  aspect-ratio: 1906 / 1472;
+  height: auto;
+}
 
 .project-img::before {
   content: "";
@@ -1018,6 +1024,7 @@ main {
 .project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
 
 .project-img img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
