@@ -15,7 +15,7 @@
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css?v=credentials">
 
   <!--
     - google font link
@@ -563,6 +563,58 @@
 
         </section>
 
+        <section class="credentials">
+
+          <h3 class="h3 credentials-title">Credentials & Recognition</h3>
+
+          <ul class="credentials-list">
+
+            <li class="credentials-item">
+              <button class="credentials-link" type="button" data-credential-item
+                data-credential-src="./assets/images/Resume/Huiyu(Anthony)ZhangGISCertificate.jpg"
+                data-credential-title="GIS Certificate">
+                <figure class="credentials-img">
+                  <img src="./assets/images/Resume/Huiyu(Anthony)ZhangGISCertificate.jpg" alt="GIS Certificate" loading="lazy">
+                </figure>
+
+                <h4 class="h4 credentials-item-title">GIS Certificate</h4>
+              </button>
+            </li>
+
+            <li class="credentials-item">
+              <button class="credentials-link" type="button" data-credential-item
+                data-credential-src="./assets/images/Resume/Huiyu(Anthony)ZhangInternshipAward.jpg"
+                data-credential-title="Co-op Award">
+                <figure class="credentials-img">
+                  <img src="./assets/images/Resume/Huiyu(Anthony)ZhangInternshipAward.jpg" alt="Co-op Student Award" loading="lazy">
+                </figure>
+
+                <h4 class="h4 credentials-item-title">Co-op Award</h4>
+              </button>
+            </li>
+
+          </ul>
+
+        </section>
+
+        <div class="credential-modal-container" data-credential-modal-container>
+
+          <div class="credential-overlay" data-credential-overlay></div>
+
+          <section class="credential-modal">
+
+            <button class="modal-close-btn" type="button" data-credential-modal-close>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <h3 class="h3 credential-modal-title" data-credential-modal-title></h3>
+
+            <img class="credential-modal-img" src="./assets/images/Resume/Huiyu(Anthony)ZhangGISCertificate.jpg" alt="" data-credential-modal-img>
+
+          </section>
+
+        </div>
+
       </article>
 
 
@@ -785,7 +837,7 @@
   <!--
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script.js?v=credentials"></script>
 
   <!--
     - ionicon link

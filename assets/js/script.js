@@ -55,6 +55,38 @@ overlay.addEventListener("click", testimonialsModalFunc);
 
 
 
+// resume credential image modal
+const credentialItems = document.querySelectorAll("[data-credential-item]");
+const credentialModalContainer = document.querySelector("[data-credential-modal-container]");
+const credentialModalCloseBtn = document.querySelector("[data-credential-modal-close]");
+const credentialOverlay = document.querySelector("[data-credential-overlay]");
+const credentialModalImg = document.querySelector("[data-credential-modal-img]");
+const credentialModalTitle = document.querySelector("[data-credential-modal-title]");
+
+const credentialModalFunc = function () {
+  credentialModalContainer.classList.toggle("active");
+  credentialOverlay.classList.toggle("active");
+}
+
+for (let i = 0; i < credentialItems.length; i++) {
+
+  credentialItems[i].addEventListener("click", function () {
+
+    credentialModalImg.src = this.dataset.credentialSrc;
+    credentialModalImg.alt = this.dataset.credentialTitle;
+    credentialModalTitle.innerHTML = this.dataset.credentialTitle;
+
+    credentialModalFunc();
+
+  });
+
+}
+
+credentialModalCloseBtn.addEventListener("click", credentialModalFunc);
+credentialOverlay.addEventListener("click", credentialModalFunc);
+
+
+
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
