@@ -87,6 +87,42 @@ credentialOverlay.addEventListener("click", credentialModalFunc);
 
 
 
+// portfolio cartography map modal
+const mapItems = document.querySelectorAll("[data-map-item]");
+const mapModalContainer = document.querySelector("[data-map-modal-container]");
+const mapModalCloseBtn = document.querySelector("[data-map-modal-close]");
+const mapOverlay = document.querySelector("[data-map-overlay]");
+const mapModalImg = document.querySelector("[data-map-modal-img]");
+const mapModalTitle = document.querySelector("[data-map-modal-title]");
+
+const mapModalFunc = function () {
+  mapModalContainer.classList.toggle("active");
+  mapOverlay.classList.toggle("active");
+}
+
+for (let i = 0; i < mapItems.length; i++) {
+
+  mapItems[i].addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+    const mapTitle = this.querySelector(".project-title").innerHTML;
+
+    mapModalImg.src = this.href;
+    mapModalImg.alt = mapTitle;
+    mapModalTitle.innerHTML = mapTitle;
+
+    mapModalFunc();
+
+  });
+
+}
+
+mapModalCloseBtn.addEventListener("click", mapModalFunc);
+mapOverlay.addEventListener("click", mapModalFunc);
+
+
+
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");

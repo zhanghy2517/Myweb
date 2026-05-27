@@ -15,7 +15,7 @@
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css?v=credentials">
+  <link rel="stylesheet" href="./assets/css/style.css?v=map-modal">
 
   <!--
     - google font link
@@ -682,7 +682,7 @@
           <ul class="project-list">
 
             <li class="project-item  active" data-filter-item data-category="cartography">
-              <a href="./assets/images/portfolio-docx/map-1.jpeg" target="_blank">
+              <a href="./assets/images/portfolio-docx/map-1.jpeg" target="_blank" data-map-item>
 
                 <figure class="project-img project-img--portrait">
                   <div class="project-item-icon-box">
@@ -700,7 +700,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="cartography">
-              <a href="./assets/images/portfolio-docx/map-2.jpeg" target="_blank">
+              <a href="./assets/images/portfolio-docx/map-2.jpeg" target="_blank" data-map-item>
 
                 <figure class="project-img project-img--portrait">
                   <div class="project-item-icon-box">
@@ -718,7 +718,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="cartography">
-              <a href="./assets/images/portfolio-docx/map-3.jpeg" target="_blank">
+              <a href="./assets/images/portfolio-docx/map-3.jpeg" target="_blank" data-map-item>
 
                 <figure class="project-img project-img--portrait">
                   <div class="project-item-icon-box">
@@ -736,7 +736,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="cartography">
-              <a href="./assets/images/portfolio-docx/map-4.jpeg" target="_blank">
+              <a href="./assets/images/portfolio-docx/map-4.jpeg" target="_blank" data-map-item>
 
                 <figure class="project-img project-img--landscape">
                   <div class="project-item-icon-box">
@@ -754,7 +754,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="cartography">
-              <a href="./assets/images/portfolio-docx/map-5.jpeg" target="_blank">
+              <a href="./assets/images/portfolio-docx/map-5.jpeg" target="_blank" data-map-item>
 
                 <figure class="project-img project-img--landscape">
                   <div class="project-item-icon-box">
@@ -809,6 +809,24 @@
 
           </ul>
 
+          <div class="map-modal-container" data-map-modal-container>
+
+            <div class="map-overlay" data-map-overlay></div>
+
+            <section class="map-modal">
+
+              <button class="modal-close-btn" type="button" data-map-modal-close>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+
+              <h3 class="h3 map-modal-title" data-map-modal-title></h3>
+
+              <img class="map-modal-img" src="./assets/images/portfolio-docx/map-1.jpeg" alt="" data-map-modal-img>
+
+            </section>
+
+          </div>
+
         </section>
 
       </article>
@@ -837,7 +855,7 @@
   <!--
     - custom js link
   -->
-  <script src="./assets/js/script.js?v=credentials"></script>
+  <script src="./assets/js/script.js?v=map-modal"></script>
 
   <!--
     - ionicon link

@@ -868,7 +868,8 @@ main {
   line-height: 1.3;
 }
 
-.credential-modal-container {
+.credential-modal-container,
+.map-modal-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -885,12 +886,14 @@ main {
   visibility: hidden;
 }
 
-.credential-modal-container.active {
+.credential-modal-container.active,
+.map-modal-container.active {
   pointer-events: all;
   visibility: visible;
 }
 
-.credential-overlay {
+.credential-overlay,
+.map-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -904,7 +907,8 @@ main {
   transition: var(--transition-1);
 }
 
-.credential-overlay.active {
+.credential-overlay.active,
+.map-overlay.active {
   opacity: 0.85;
   visibility: visible;
   pointer-events: all;
@@ -917,31 +921,66 @@ main {
   padding: 18px;
   border: 1px solid var(--jet);
   border-radius: 8px;
-  background: var(--surface-dark);
-  box-shadow: var(--shadow-5);
+  background: var(--eerie-black-2);
+  box-shadow: var(--shadow-1), var(--shadow-5);
   transform: scale(1.05);
   opacity: 0;
   transition: var(--transition-1);
   z-index: 2;
 }
 
-.credential-modal-container.active .credential-modal {
+.credential-modal-container.active .credential-modal,
+.map-modal-container.active .map-modal {
   transform: scale(1);
   opacity: 1;
 }
 
-.credential-modal-title {
+.credential-modal .modal-close-btn,
+.map-modal .modal-close-btn {
+  background: var(--surface-soft);
+  border: 1px solid var(--jet);
+  color: var(--white-2);
+  box-shadow: var(--shadow-1);
+}
+
+.credential-modal .modal-close-btn:hover,
+.credential-modal .modal-close-btn:focus,
+.map-modal .modal-close-btn:hover,
+.map-modal .modal-close-btn:focus {
+  background: var(--eerie-black-1);
+}
+
+.credential-modal-title,
+.map-modal-title {
+  color: var(--white-2);
   padding-right: 44px;
   margin-bottom: 14px;
 }
 
-.credential-modal-img {
+.credential-modal-img,
+.map-modal-img {
   display: block;
   width: 100%;
   max-height: calc(88vh - 96px);
   object-fit: contain;
+  border: 1px solid var(--jet);
   border-radius: 8px;
   background: var(--surface-soft);
+}
+
+.map-modal {
+  position: relative;
+  width: min(96vw, 1180px);
+  max-height: 88vh;
+  padding: 18px;
+  border: 1px solid var(--jet);
+  border-radius: 8px;
+  background: var(--eerie-black-2);
+  box-shadow: var(--shadow-1), var(--shadow-5);
+  transform: scale(1.05);
+  opacity: 0;
+  transition: var(--transition-1);
+  z-index: 2;
 }
 
 
