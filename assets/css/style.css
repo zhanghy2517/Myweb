@@ -979,7 +979,7 @@ main {
   transition: var(--transition-1);
 }
 
-.project-item > a:hover .project-img::before { background: hsla(20, 41%, 58%, 0.2); }
+.project-item > a:hover .project-img::before { background: transparent; }
 
 .project-item-icon-box {
   --scale: 0.8;
